@@ -7,21 +7,44 @@
     <title>Sam.p</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      @keyframes reveal {
-        from {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      .letter {
-        opacity: 0;
-        display: inline-block;
-        animation: reveal 0.0s forwards;
-      }
+ @keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+.letter {
+  opacity: 0;
+  display: inline-block;
+}
+
+.show {
+  animation: reveal 0.5s forwards;
+}
+
+.hide {
+  animation: hide 0.5s forwards;
+}
+
+
+
+
     </style>
   </head>
   <body>
